@@ -7,3 +7,12 @@
 /build
 /captures
 .externalNativeBuild
+*/build
+*/*/build
+*/*/*/build
+*/*.iml
+*/*/*.iml
+.idea
+*/vcs.xml
+.svn
+.git
