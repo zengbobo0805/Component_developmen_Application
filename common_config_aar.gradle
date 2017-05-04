@@ -1,0 +1,70 @@
+//所有工程都要用的公共配置，由各个子模块直接apply from
+//apply from: 'https://raw.githubusercontent.com/adwiv/android-fat-aar/master/fat-aar.gradle'
+//apply plugin: 'com.android.library'
+
+
+repositories {
+    flatDir { dirs '/aars', '../aars', '../../aars' }
+}
+
+//gradlew -q dependencies xrz_android:dependencies --configuration compile
+dependencies {
+    /******************start 打包时候要正式和测试环境区别  **********************/
+
+    if (rootProject.ext.isDebug_aar) {
+        /*************测试环境*************/
+        compile(name: 'common_android-xrzTest', ext: 'aar')
+        compile(name: 'common_library-debug', ext: 'aar')
+    } else {
+        /*************正式发布*************/
+        compile(name: 'common_android-xrzRelease', ext: 'aar')
+        compile(name: 'common_library-release', ext: 'aar')
+    }
+
+    /*********************mine 特别调试 ******************/
+//    compile(name: 'common_android-xrzRelease_mine', ext: 'aar')
+//    compile(name: 'common_library-debug', ext: 'aar')
+    /******************end 打包时候要正式和测试环境区别  ************************/
+    compile(name: 'vhallsdk2.7.0', ext: 'aar')
+    compile(name: 'common_aliyun_http-release', ext: 'aar')
+    compile(name: 'common_jpush-xrzRelease', ext: 'aar')
+    compile(name: 'common_alibaba_fb-release', ext: 'aar')
+    compile(name: 'Android-Universal-Image-Loader-release', ext: 'aar')
+    compile(name: 'common_umeng_analytics-release', ext: 'aar')
+//    compile(name: 'common_umeng_fb-release', ext: 'aar')
+    compile(name: 'common_umeng_onlineconfig-release', ext: 'aar')
+    compile(name: 'XCL-Charts-release', ext: 'aar')
+
+    //    compile project(':XCL-Charts')
+    //VHALL
+    compile('io.socket:socket.io-client:0.8.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    compile(name: 'common_umeng_share_login-release', ext: 'aar')
+    compile(name: 'common_growing_io-xrzRelease', ext: 'aar')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+    compile 'com.alipay.euler:andfix:0.4.0@aar'
+    compile 'com.culiu.android:mhvp-core:2.1.2@aar'
+    compile 'com.culiu.android:mhvp-integrated-ptr:2.1.2@aar'
+    compile("com.android.support:support-v4:${rootProject.ext.SupportVersionName}")
+    compile("com.android.support:appcompat-v7:${rootProject.ext.SupportVersionName}") {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile("com.android.support:recyclerview-v7:${rootProject.ext.SupportVersionName}") {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile("com.android.support:design:${rootProject.ext.SupportVersionName}") {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile('com.google.android.gms:play-services-appindexing:9.8.0') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile('com.growingio.android:vds-android-agent:0.9.100@aar')
+    compile("com.android.support:support-vector-drawable:${rootProject.ext.SupportVersionName}")
+    compile("com.android.support:support-annotations:${rootProject.ext.SupportVersionName}")
+
+
+}
+
+

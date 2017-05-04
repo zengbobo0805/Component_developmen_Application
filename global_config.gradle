@@ -1,0 +1,73 @@
+//所有工程都要用的公共配置，由各个子模块直接apply from
+//apply from: 'https://raw.githubusercontent.com/adwiv/android-fat-aar/master/fat-aar.gradle'
+//apply plugin: 'com.android.library'
+
+android {
+    useLibrary "org.apache.http.legacy"
+
+    // 编译SDK的版本
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi", "x86","arm64-v8a"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    packagingOptions{
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/NOTICE.TXT'
+        exclude 'META-INF/LICENSE.TXT'
+        exclude 'META-INF/LICENSE.TXT'
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+	dexOptions {
+		javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
+    // lint所有选项请单独加入
+    lintOptions {
+//        checkReleaseBuilds true
+        abortOnError false
+//        check 'NewApi'  //新API
+//        showAll true
+        // if true, only report errors
+        ignoreWarnings true
+        disable "ResourceType"
+    }
+
+
+}
+
+dependencies{
+    // 编译libs目录下的所有jar包
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+}
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}
+
