@@ -18,16 +18,16 @@ android {
     signingConfigs {
         debug {
             // No debug config
-            keyAlias "xrzgp"
-            keyPassword "zhangchen31"
-            storeFile file('D:/android_2016_4_26/gitLab/xrz_application/richeninfoKey_3x.3x')
-            storePassword "zhangchen31"
+            keyAlias "Component_developmen_Application"
+            keyPassword "20170504"
+            storeFile file('D:\\android_2016_4_26\\github\\android_plugin\\Component_developmen_Application/key_component_developmen.jks')
+            storePassword "20170504"
         }
         release {
-            storeFile file("D:/android_2016_4_26/gitLab/xrz_application/richeninfoKey_3x.3x")
-            storePassword "zhangchen31"
-            keyAlias "xrzgp"
-            keyPassword "zhangchen31"
+            storeFile file("D:\\android_2016_4_26\\github\\android_plugin\\Component_developmen_Application/key_component_developmen.jks")
+            storePassword "20170504"
+            keyAlias "Component_developmen_Application"
+            keyPassword "20170504"
         }
     }
 

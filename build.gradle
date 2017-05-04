@@ -18,6 +18,49 @@ allprojects {
     }
 }
 
+
+ext {
+    //是否是开发模式，开发模式业务单独apk,发布业务作为library
+    isDevModel = true
+
+    //正式环境
+//    NIM_APPKEY_VALUE = "afb8660c8810d0f246bef43179aa4973"
+//    JPUSH_APPKEY_VALUE = "484cb8831bd82d049b26386c"
+//    Xrz_Android_IS_RELEASE = true
+//    Xrz_Android_LOG_DEBUG = false
+//    isDebug_aar = false
+    //测试环境
+    NIM_APPKEY_VALUE = "80a310c62f55dc75222ad381c0556a5c"
+    JPUSH_APPKEY_VALUE = "096222e86a6d10798a2f5991"
+    Xrz_Android_IS_RELEASE = false
+    Xrz_Android_LOG_DEBUG = true
+    isDebug_aar = true
+
+
+    compileSdkVersion= 23
+    buildToolsVersion= "23.0.3"
+    minSdkVersion =16
+    targetSdkVersion= 23
+    versionCode= 400
+    versionName= "4.0.0"
+    SupportVersionName ="23.4.0"
+
+//    android = [
+//            compileSdkVersion: 23,
+//            buildToolsVersion: "24.0.2",
+//            minSdkVersion    : 15,
+//            targetSdkVersion : 23,
+//            versionCode      : 1,
+//            versionName      : "1.0"
+//    ]
+//
+//    dependVersion = [
+//            SupportVersionName: "23.4.0"
+//    ]
+
+}
+
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
