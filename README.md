@@ -2,7 +2,8 @@
 android组件开发
 
 
-一.项目module功能介绍：
+<b><h1>一.项目module功能介绍：</h1></b>
+  
   1.common_lib   
           
       各功能业务要使用到的base类（如Activity,Fragment,BaseAdapter等）；
@@ -31,7 +32,7 @@ android组件开发
   
        最后各业务合并打包主app；
   
-二.本项目希望以后实现组件开发，各组件可以单独打包成Apk,和main_app宿主一起发布；
+<b><h1>二.本项目希望以后实现组件开发，各组件可以单独打包成Apk,和main_app宿主一起发布；</h1></b>
 
     （希望有志之士一起开发，项目将一直保持开源）
 
