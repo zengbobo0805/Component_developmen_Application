@@ -9,24 +9,13 @@ repositories {
 
 //gradlew -q dependencies xrz_android:dependencies --configuration compile
 dependencies {
-    compile("com.android.support:support-v4:${rootProject.ext.SupportVersionName}")
-    compile("com.android.support:appcompat-v7:${rootProject.ext.SupportVersionName}") {
-        exclude group: 'com.android.support', module: 'support-v4'
+    if (rootProject.ext.isDebug_aar) {
+        /*************测试环境*************/
+        compile(name: 'common_library-debug', ext: 'aar')
+    } else {
+        /*************正式发布*************/
+        compile(name: 'common_library-release', ext: 'aar')
     }
-    compile("com.android.support:recyclerview-v7:${rootProject.ext.SupportVersionName}") {
-        exclude group: 'com.android.support', module: 'support-v4'
-    }
-    compile("com.android.support:design:${rootProject.ext.SupportVersionName}") {
-        exclude group: 'com.android.support', module: 'support-v4'
-    }
-    compile('com.google.android.gms:play-services-appindexing:9.8.0') {
-        exclude group: 'com.android.support', module: 'support-v4'
-    }
-    compile('com.growingio.android:vds-android-agent:0.9.100@aar')
-    compile("com.android.support:support-vector-drawable:${rootProject.ext.SupportVersionName}")
-    compile("com.android.support:support-annotations:${rootProject.ext.SupportVersionName}")
-
-
 }
 
 

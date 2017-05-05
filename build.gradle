@@ -35,15 +35,15 @@ ext {
     Xrz_Android_IS_RELEASE = false
     Xrz_Android_LOG_DEBUG = true
     isDebug_aar = true
+/** ************************************************/
 
-
-    compileSdkVersion= 23
-    buildToolsVersion= "23.0.3"
-    minSdkVersion =16
-    targetSdkVersion= 23
-    versionCode= 400
-    versionName= "4.0.0"
-    SupportVersionName ="23.4.0"
+    compileSdkVersion = 23
+    buildToolsVersion = "23.0.3"
+    minSdkVersion = 16
+    targetSdkVersion = 23
+    versionCode = 400
+    versionName = "4.0.0"
+    SupportVersionName = "23.4.0"
 
 //    android = [
 //            compileSdkVersion: 23,

@@ -1,0 +1,7 @@
+apply plugin: 'com.android.library'
+apply from:'../../global_config.gradle'
+apply from:'../../common_config_aar.gradle'
+
+dependencies {
+    compile project(':common_business')
+}

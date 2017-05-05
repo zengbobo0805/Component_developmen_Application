@@ -9,6 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/business_dev" />
+            <option value="$PROJECT_DIR$/business_dev/business_demo1" />
+            <option value="$PROJECT_DIR$/business_dev_test" />
+            <option value="$PROJECT_DIR$/business_intent" />
             <option value="$PROJECT_DIR$/common_business" />
             <option value="$PROJECT_DIR$/common_lib" />
             <option value="$PROJECT_DIR$/main_app" />

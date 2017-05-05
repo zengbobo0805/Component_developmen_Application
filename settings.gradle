@@ -1,1 +1,11 @@
-include ':main_app', ':common_lib', ':common_business',':business_dev'
+include ':main_app', ':common_lib', ':common_business', ':business_dev', ':business_dev_test', ':business_intent'
+
+
+
+
+//子文件夹建module
+// -------方法一
+include ':business_dev:business_demo1'
+// -------方法二
+//include ':business_demo2'
+//project(':business_demo2').projectDir = new File('business_dev/business_demo2')

@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Component_developmen_Application.iml" filepath="$PROJECT_DIR$/Component_developmen_Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business_dev/business_demo1/business_demo1.iml" filepath="$PROJECT_DIR$/business_dev/business_demo1/business_demo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/business_dev/business_dev.iml" filepath="$PROJECT_DIR$/business_dev/business_dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business_dev_test/business_dev_test.iml" filepath="$PROJECT_DIR$/business_dev_test/business_dev_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business_intent/business_intent.iml" filepath="$PROJECT_DIR$/business_intent/business_intent.iml" />
       <module fileurl="file://$PROJECT_DIR$/common_business/common_business.iml" filepath="$PROJECT_DIR$/common_business/common_business.iml" />
       <module fileurl="file://$PROJECT_DIR$/common_lib/common_lib.iml" filepath="$PROJECT_DIR$/common_lib/common_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/main_app/main_app.iml" filepath="$PROJECT_DIR$/main_app/main_app.iml" />

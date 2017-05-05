@@ -5,11 +5,11 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 
+
 import com.common.utils.LogUtil;
 
 import java.util.List;
 
-;
 
 /**
  * Created by bobo on 2017/4/21.
