@@ -18,15 +18,15 @@ android {
     signingConfigs {
         debug {
             // No debug config
-            keyAlias "Component_developmen_Application"
+            keyAlias "key_component_developmen"
             keyPassword "20170504"
-            storeFile file('D:\\android_2016_4_26\\github\\android_plugin\\Component_dev/key_component_developmen.jks')
+            storeFile file('D:/android_2016_4_26/github/android_plugin/Component_dev/key_component_developmen.jks')
             storePassword "20170504"
         }
         release {
-            storeFile file("D:\\android_2016_4_26\\github\\android_plugin\\Component_dev/key_component_developmen.jks")
+            storeFile file("D:/android_2016_4_26/github/android_plugin/Component_dev/key_component_developmen.jks")
             storePassword "20170504"
-            keyAlias "Component_developmen_Application"
+            keyAlias "key_component_developmen"
             keyPassword "20170504"
         }
     }
