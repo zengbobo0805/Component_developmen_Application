@@ -7,5 +7,5 @@ include ':main_app', ':common_lib', ':common_business', ':business_dev', ':busin
 // -------方法一
 include ':business_dev:business_demo1'
 // -------方法二
-//include ':business_demo2'
-//project(':business_demo2').projectDir = new File('business_dev/business_demo2')
+include ':business_demo2'
+project(':business_demo2').projectDir = new File('business_dev/business_demo2')

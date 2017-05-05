@@ -6,7 +6,7 @@ def releaseTime() {
 android {
 
     defaultConfig {
-        applicationId "com.icaikee.xrzgp"
+        applicationId "com.zengbobo.component"
 
         // dex突破65535的限制
         multiDexEnabled true
@@ -20,11 +20,11 @@ android {
             // No debug config
             keyAlias "Component_developmen_Application"
             keyPassword "20170504"
-            storeFile file('D:\\android_2016_4_26\\github\\android_plugin\\Component_developmen_Application/key_component_developmen.jks')
+            storeFile file('D:\\android_2016_4_26\\github\\android_plugin\\Component_dev/key_component_developmen.jks')
             storePassword "20170504"
         }
         release {
-            storeFile file("D:\\android_2016_4_26\\github\\android_plugin\\Component_developmen_Application/key_component_developmen.jks")
+            storeFile file("D:\\android_2016_4_26\\github\\android_plugin\\Component_dev/key_component_developmen.jks")
             storePassword "20170504"
             keyAlias "Component_developmen_Application"
             keyPassword "20170504"
@@ -47,7 +47,7 @@ android {
         }
 
         //测试环境
-        xrzTest {
+        Test {
             debuggable true
             // 是否进行混淆
             minifyEnabled false
@@ -59,7 +59,7 @@ android {
             signingConfig signingConfigs.debug
         }
         //预发布环境环境
-        xrzPre {
+        Pre {
             debuggable true
             // 是否进行混淆
             minifyEnabled false
@@ -91,16 +91,16 @@ android {
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
                 // 输出apk名称为xrzgp_v1.0_1_2015-01-15_wandoujia.apk
                 if (variant.name.contains("Release")) {
-                    def fileName = "xrzgp_v${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime()}_${variant.productFlavors[0].name}_release.apk"
+                    def fileName = "comp_v${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime()}_${variant.productFlavors[0].name}_release.apk"
                     output.outputFile = new File(outputFile.parent, fileName)
-                } else if (variant.name.contains("XrzTest")) {
-                    def fileName = "xrzgp_v${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime()}_${variant.productFlavors[0].name}_xrzTest.apk"
+                } else if (variant.name.contains("Test")) {
+                    def fileName = "comp_v${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime()}_${variant.productFlavors[0].name}_xrzTest.apk"
                     output.outputFile = new File(outputFile.parent, fileName)
-                } else if (variant.name.contains("XrzPre")) {
-                    def fileName = "xrzgp_v${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime()}_${variant.productFlavors[0].name}_xrzPre.apk"
+                } else if (variant.name.contains("Pre")) {
+                    def fileName = "comp_v${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime()}_${variant.productFlavors[0].name}_xrzPre.apk"
                     output.outputFile = new File(outputFile.parent, fileName)
                 } else {
-                    def fileName = "xrzgp_v${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime()}_${variant.productFlavors[0].name}_debug.apk"
+                    def fileName = "comp_v${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime()}_${variant.productFlavors[0].name}_debug.apk"
                     output.outputFile = new File(outputFile.parent, fileName)
                 }
             }

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Component_developmen_Application.iml" filepath="$PROJECT_DIR$/Component_developmen_Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Component_dev.iml" filepath="$PROJECT_DIR$/Component_dev.iml" />
       <module fileurl="file://$PROJECT_DIR$/business_dev/business_demo1/business_demo1.iml" filepath="$PROJECT_DIR$/business_dev/business_demo1/business_demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business_dev/business_demo2/business_demo2.iml" filepath="$PROJECT_DIR$/business_dev/business_demo2/business_demo2.iml" />
       <module fileurl="file://$PROJECT_DIR$/business_dev/business_dev.iml" filepath="$PROJECT_DIR$/business_dev/business_dev.iml" />
       <module fileurl="file://$PROJECT_DIR$/business_dev_test/business_dev_test.iml" filepath="$PROJECT_DIR$/business_dev_test/business_dev_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/business_intent/business_intent.iml" filepath="$PROJECT_DIR$/business_intent/business_intent.iml" />

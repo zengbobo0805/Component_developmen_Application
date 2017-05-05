@@ -1,3 +1,5 @@
 apply plugin: 'com.android.application'
 apply from:'../global_config.gradle'
+apply from:'../common_config_aar.gradle'
+apply from:'../global_config_application.gradle'
 
